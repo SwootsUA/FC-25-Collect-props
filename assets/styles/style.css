@@ -79,14 +79,16 @@ input:focus {
 .error {
     opacity: 0;
     position: absolute;
-    padding: 10px 0;
+    padding: 5px 0;
     bottom: 75%;
     width: 0;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
-    background-color: var(--cancel-button-color);
-    border-radius: 5px;
+    color: red;
+    border: 5px solid red;
+    background-color: white;
+    border-radius: 2px;
 }
 
 .error.active {
