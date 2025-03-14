@@ -30,21 +30,25 @@ function buildPage() {
     firstNameInput.required = true;
     firstNameInput.type = 'text';
     firstNameInput.placeholder = text.firstNameInput;
+    firstNameInput.id = 'first-name'
 
     const lastNameInput = document.createElement('input');
     lastNameInput.required = true;
     lastNameInput.type = 'text';
     lastNameInput.placeholder = text.lastNameInput;
+    lastNameInput.id = 'last-name'
 
     const displayNameInput = document.createElement('input');
     displayNameInput.required = true;
     displayNameInput.type = 'text';
     displayNameInput.placeholder = text.displayNameInput;
+    displayNameInput.id = 'display-name'
 
     const emailInput = document.createElement('input');
     emailInput.required = true;
     emailInput.type = 'email';
     emailInput.placeholder = text.emailInput;
+    emailInput.id = 'email'
 
     textInputsContainer.append(
         firstNameInput,
