@@ -30,31 +30,40 @@ function buildPage() {
     firstNameInput.required = true;
     firstNameInput.type = 'text';
     firstNameInput.placeholder = text.firstNameInput;
-    firstNameInput.id = 'first-name'
+    firstNameInput.id = 'first-name';
 
     const lastNameInput = document.createElement('input');
     lastNameInput.required = true;
     lastNameInput.type = 'text';
     lastNameInput.placeholder = text.lastNameInput;
-    lastNameInput.id = 'last-name'
+    lastNameInput.id = 'last-name';
 
     const displayNameInput = document.createElement('input');
     displayNameInput.required = true;
     displayNameInput.type = 'text';
     displayNameInput.placeholder = text.displayNameInput;
-    displayNameInput.id = 'display-name'
+    displayNameInput.id = 'display-name';
 
+    const emailContainer = document.createElement('div');
+    emailContainer.classList.add('email-container')
+    
     const emailInput = document.createElement('input');
     emailInput.required = true;
     emailInput.type = 'email';
     emailInput.placeholder = text.emailInput;
-    emailInput.id = 'email'
+    emailInput.id = 'email';
+
+    const emailError = document.createElement('div');
+    emailError.classList.add('error');
+    emailError.innerText = 'Invalid email address.';
+
+    emailContainer.append(emailInput, emailError)
 
     textInputsContainer.append(
         firstNameInput,
         lastNameInput,
         displayNameInput,
-        emailInput
+        emailContainer
     );
 
     const buttonContainer = document.createElement('div');
