@@ -9,6 +9,7 @@ function buildPage() {
         lastNameInput: 'Last name',
         displayNameInput: 'Display Name',
         emailInput: 'Email Address',
+        emailError: 'Invalid email address.',
     };
 
     const container = document.querySelector('.container');
@@ -55,7 +56,7 @@ function buildPage() {
 
     const emailError = document.createElement('div');
     emailError.classList.add('error');
-    emailError.innerText = 'Invalid email address.';
+    emailError.innerText = text.emailError;
 
     emailContainer.append(emailInput, emailError)
 
