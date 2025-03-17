@@ -69,7 +69,7 @@ input:focus {
     outline: none;
 }
 
-.email-container {
+.error-container {
     position: relative;
     display: flex;
     flex: 1 1 calc(45% - 15px);

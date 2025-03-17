@@ -10,6 +10,9 @@ function buildPage() {
         displayNameInput: 'Display Name',
         emailInput: 'Email Address',
         emailError: 'Invalid email address.',
+        passwordInput: 'Password',
+        confirmPasswordInput: 'Confirm Password',
+        passwordError: "Passwords don't match.",
     };
 
     const container = document.querySelector('.container');
@@ -46,8 +49,8 @@ function buildPage() {
     displayNameInput.id = 'display-name';
 
     const emailContainer = document.createElement('div');
-    emailContainer.classList.add('email-container')
-    
+    emailContainer.classList.add('error-container');
+
     const emailInput = document.createElement('input');
     emailInput.required = true;
     emailInput.type = 'email';
@@ -58,13 +61,36 @@ function buildPage() {
     emailError.classList.add('error');
     emailError.innerText = text.emailError;
 
-    emailContainer.append(emailInput, emailError)
+    emailContainer.append(emailInput, emailError);
+
+    const passwordInput = document.createElement('input');
+    passwordInput.required = true;
+    passwordInput.type = 'password';
+    passwordInput.placeholder = text.passwordInput;
+    passwordInput.id = 'password';
+
+    const confirmPasswordContainer = document.createElement('div');
+    confirmPasswordContainer.classList.add('error-container');
+
+    const confirmPasswordInput = document.createElement('input');
+    confirmPasswordInput.required = true;
+    confirmPasswordInput.type = 'password';
+    confirmPasswordInput.placeholder = text.confirmPasswordInput;
+    confirmPasswordInput.id = 'confirm-password';
+
+    const passwordError = document.createElement('div');
+    passwordError.classList.add('error');
+    passwordError.innerText = text.passwordError;
+
+    confirmPasswordContainer.append(confirmPasswordInput, passwordError);
 
     textInputsContainer.append(
         firstNameInput,
         lastNameInput,
         displayNameInput,
-        emailContainer
+        emailContainer,
+        passwordInput,
+        confirmPasswordContainer
     );
 
     const buttonContainer = document.createElement('div');
